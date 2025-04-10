@@ -53,10 +53,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#080818] text-white">
       {/* Fixed Navbar */}
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#080818]/90 backdrop-blur-md" : "bg-transparent"}`}
-      >
-        <div className="container mx-auto px-4 py-4">
+      <header className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] rounded-xl border border-[#2e2e38] bg-black/80 shadow-lg backdrop-blur-md`}>
+        <div className="px-6 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
               <Link href="/" className="flex items-center space-x-2">
@@ -125,22 +123,24 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 md:pt-40 md:pb-32">
+        <section className="pt-36 pb-24 md:pt-44 md:pb-32">
+
           <div className="container mx-auto px-4 text-center">
-            <motion.div className="mb-8" initial="hidden" animate="visible" variants={fadeIn}>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gray-800 border border-gray-700 mb-8">
+            <motion.div className="mb-8 flex justify-center" initial="hidden" animate="visible" variants={fadeIn}>
+              <div className="inline-flex items-center px-4 py-2 rounded-full border border-[#333] bg-[#1a1a2e] shadow-md">
                 <div className="grid grid-cols-2 gap-0.5 mr-2">
-                  <div className="w-2 h-2 bg-blue-500"></div>
-                  <div className="w-2 h-2 bg-green-500"></div>
-                  <div className="w-2 h-2 bg-red-500"></div>
-                  <div className="w-2 h-2 bg-yellow-500"></div>
+                  <div className="w-2 h-2 bg-blue-500" />
+                  <div className="w-2 h-2 bg-green-500" />
+                  <div className="w-2 h-2 bg-red-500" />
+                  <div className="w-2 h-2 bg-yellow-500" />
                 </div>
                 <span className="text-sm text-gray-300">Member of Microsoft Startup Founders Hub</span>
               </div>
             </motion.div>
 
+
             <motion.h1
-              className="text-4xl md:text-6xl font-bold mb-4 leading-tight"
+              className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white"
               initial="hidden"
               animate="visible"
               variants={fadeIn}
@@ -148,10 +148,11 @@ export default function Home() {
               Build Powerful AI Applications
               <br />
               With{" "}
-              <span className="text-indigo-400 border border-dashed border-indigo-400 px-4 py-2 rounded-lg">
+              <span className="px-4 py-2 rounded-md border-2 border-dashed border-indigo-500 bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-500 text-transparent bg-clip-text shadow-lg">
                 Seamless Integrations
               </span>
             </motion.h1>
+
 
             <motion.p
               className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto"
