@@ -51,9 +51,11 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#080818] text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#080818] via-[#0c0c1c] to-[#0c0c1c] text-white">
+
       {/* Fixed Navbar */}
-      <header className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] rounded-xl border border-[#2e2e38] bg-black/80 shadow-lg backdrop-blur-md`}>
+      <header className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-7xl rounded-xl border border-white/10 px-6 py-4 transition-all duration-300 ${scrolled ? "bg-black/60 backdrop-blur-xl" : "bg-black/40 backdrop-blur-md"}`}>
+
         <div className="px-6 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
@@ -64,7 +66,8 @@ export default function Home() {
                 <span className="text-xl font-bold">Kidjig</span>
               </Link>
 
-              <nav className="hidden md:flex items-center space-x-6">
+              <nav className="hidden md:flex items-center space-x-8">
+
                 <div className="relative group">
                   <button className="flex items-center text-gray-300 hover:text-white">
                     Products
@@ -90,9 +93,10 @@ export default function Home() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <button className="text-gray-300 hover:text-white">
+              <Button variant="ghost" size="icon" className="ml-4 text-gray-300 hover:text-white">
                 <Sun className="h-5 w-5" />
-              </button>
+              </Button>
+
               <Link
                 href="#"
                 className="hidden md:block text-gray-300 hover:text-white px-4 py-2 rounded-md border border-gray-700"
@@ -140,7 +144,7 @@ export default function Home() {
 
 
             <motion.h1
-              className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white"
+              className="text-4xl md:text-6xl font-bold mb-10 leading-tight"
               initial="hidden"
               animate="visible"
               variants={fadeIn}
@@ -148,14 +152,15 @@ export default function Home() {
               Build Powerful AI Applications
               <br />
               With{" "}
-              <span className="px-4 py-2 rounded-md border-2 border-dashed border-indigo-500 bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-500 text-transparent bg-clip-text shadow-lg">
+              <span className="bg-gradient-to-br from-[#8b5cf6] to-[#6366f1] text-transparent bg-clip-text font-extrabold text-outline border-2 border-dashed border-indigo-400 px-6 py-3 rounded-xl shadow-inner">
                 Seamless Integrations
               </span>
+
             </motion.h1>
 
 
             <motion.p
-              className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto"
+              className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto"
               initial="hidden"
               animate="visible"
               variants={fadeIn}
